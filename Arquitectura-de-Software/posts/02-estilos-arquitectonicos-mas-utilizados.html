@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos Arquitectónicos más Utilizados - Arquitectura de Software</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Arquitectura de Software</h1>
+        <h2>Por Yun Erasmo Martinez</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="01-que-es-arquitectura-de-software.html">¿Qué es la Arquitectura de Software?</a></li>
+                <li><a href="02-estilos-arquitectonicos-mas-utilizados.html">Estilos Arquitectónicos</a></li>
+                <li><a href="03-patrones-arquitectonicos-modernos.html">Patrones Arquitectónicos Modernos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Estilos Arquitectónicos más Utilizados</h2>
+            <p><strong>Definición de estilo arquitectónico:</strong> Un estilo arquitectónico es un enfoque o patrón que se utiliza para estructurar un sistema de software, definiendo cómo se organizan y comunican los componentes.</p>
+            
+            <h3>Estilo Monolítico</h3>
+            <p><strong>Características:</strong> Todo el sistema está integrado en una única unidad. <br>
+            <strong>Ventajas:</strong> Simplicidad en el desarrollo y despliegue. <br>
+            <strong>Desventajas:</strong> Dificultad para escalar y mantener.</p>
+
+            <h3>Arquitectura en Capas (N-Capas)</h3>
+            <p>Se organiza en capas donde cada capa tiene una responsabilidad específica. <br>
+            <strong>Ventajas:</strong> Separación de preocupaciones. <br>
+            <strong>Desventajas:</strong> Puede introducir latencia.</p>
+
+            <h3>Arquitectura Cliente-Servidor</h3>
+            <p>Divide el sistema en dos partes: el cliente que solicita servicios y el servidor que los proporciona. <br>
+            <strong>Ventajas:</strong> Escalabilidad y flexibilidad. <br>
+            <strong>Desventajas:</strong> Dependencia de la red.</p>
+
+            <h3>Arquitectura MVC</h3>
+            <p>Modelo-Vista-Controlador, separa la lógica de negocio, la interfaz de usuario y el control de flujo. <br>
+            <strong>Ventajas:</strong> Facilita el mantenimiento. <br>
+            <strong>Desventajas:</strong> Complejidad en la implementación.</p>
+
+            <h3>Arquitectura de Microservicios</h3>
+            <p>Descompone la aplicación en servicios pequeños e independientes. <br>
+            <strong>Ventajas:</strong> Escalabilidad y despliegue independiente. <br>
+            <strong>Desventajas:</strong> Complejidad en la gestión de servicios.</p>
+
+            <h3>Comparación entre los estilos</h3>
+            <table>
+                <tr>
+                    <th>Estilo</th>
+                    <th>Ventajas</th>
+                    <th>Desventajas</th>
+                </tr>
+                <tr>
+                    <td>Monolítico</td>
+                    <td>Simplicidad</td>
+                    <td>Dificultad para escalar</td>
+                </tr>
+                <tr>
+                    <td>N-Capas</td>
+                    <td>Separación de preocupaciones</td>
+                    <td>Latencia</td>
+                </tr>
+                <tr>
+                    <td>Cliente-Servidor</td>
+                    <td>Escalabilidad</td>
+                    <td>Dependencia de la red</td>
+                </tr>
+                <tr>
+                    <td>MVC</td>
+                    <td>Mantenimiento fácil</td>
+                    <td>Complejidad</td>
+                </tr>
+                <tr>
+                    <td>Microservicios</td>
+                    <td>Despliegue independiente</td>
+                    <td>Gestión compleja</td>
+                </tr>
+            </table>
+
+            <h3>Conclusión</h3>
+            <p>La elección del estilo arquitectónico depende de las necesidades del proyecto, la escalabilidad requerida y la complejidad del sistema. Cada estilo tiene sus ventajas y desventajas que deben ser consideradas cuidadosamente.</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2023 Yun Erasmo Martinez. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrones Arquitectónicos Modernos - Arquitectura de Software</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Arquitectura de Software</h1>
+        <h2>Por Yun Erasmo Martinez</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="01-que-es-arquitectura-de-software.html">¿Qué es la Arquitectura de Software?</a></li>
+                <li><a href="02-estilos-arquitectonicos-mas-utilizados.html">Estilos Arquitectónicos más Utilizados</a></li>
+                <li><a href="03-patrones-arquitectonicos-modernos.html">Patrones Arquitectónicos Modernos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h3>Patrones Arquitectónicos Modernos</h3>
+            <section>
+                <h4>Definición de Patrón Arquitectónico</h4>
+                <p>Un patrón arquitectónico es una solución general a un problema recurrente en un contexto dado dentro de la arquitectura de software. Proporciona un marco para la organización y la interacción de los componentes del sistema.</p>
+            </section>
+            <section>
+                <h4>Patrón Clean Architecture</h4>
+                <p>La Clean Architecture se basa en la separación de responsabilidades y la independencia de los frameworks. Se organiza en capas que permiten la flexibilidad y la mantenibilidad del código.</p>
+                <h5>Capas</h5>
+                <ul>
+                    <li>Entidades</li>
+                    <li>Casos de uso</li>
+                    <li>Interfaces de usuario</li>
+                    <li>Frameworks y controladores</li>
+                </ul>
+                <h5>Propósito</h5>
+                <p>Facilitar la prueba y el mantenimiento del software, permitiendo que los cambios en una capa no afecten a las demás.</p>
+            </section>
+            <section>
+                <h4>Arquitectura Hexagonal (Puertos y Adaptadores)</h4>
+                <p>Este patrón promueve la separación entre el núcleo de la aplicación y las interacciones externas, utilizando puertos y adaptadores para comunicarse con el mundo exterior.</p>
+            </section>
+            <section>
+                <h4>Patrón CQRS (Command Query Responsibility Segregation)</h4>
+                <p>Este patrón divide las operaciones de lectura y escritura en diferentes modelos, lo que permite optimizar cada uno de ellos de manera independiente.</p>
+            </section>
+            <section>
+                <h4>Ventajas y Desventajas de Cada Patrón</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patrón</th>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clean Architecture</td>
+                            <td>Alta mantenibilidad, independencia de frameworks.</td>
+                            <td>Puede ser complejo de implementar inicialmente.</td>
+                        </tr>
+                        <tr>
+                            <td>Arquitectura Hexagonal</td>
+                            <td>Flexibilidad en la integración de componentes externos.</td>
+                            <td>Requiere un diseño cuidadoso de puertos y adaptadores.</td>
+                        </tr>
+                        <tr>
+                            <td>CQRS</td>
+                            <td>Optimización de lecturas y escrituras, escalabilidad.</td>
+                            <td>Mayor complejidad en la gestión de datos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h4>Ejemplos de Aplicación en Proyectos Modernos</h4>
+                <p>Estos patrones se utilizan en diversas aplicaciones modernas, como sistemas de gestión empresarial, plataformas de comercio electrónico y aplicaciones móviles, donde la escalabilidad y la mantenibilidad son cruciales.</p>
+            </section>
+            <section>
+                <h4>Conclusión</h4>
+                <p>Los patrones arquitectónicos modernos ofrecen soluciones efectivas para los desafíos del desarrollo de software. Elegir el patrón adecuado depende de las necesidades específicas del proyecto y de los requisitos de escalabilidad y mantenibilidad.</p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2023 Yun Erasmo Martinez. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
