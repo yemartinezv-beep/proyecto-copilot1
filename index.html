@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Técnico - Arquitectura de Software | Yun Erasmo Martinez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i> <span>ArchBlog</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#post1" class="nav-link">Post 1</a></li>
+                    <li><a href="#post2" class="nav-link">Post 2</a></li>
+                    <li><a href="#post3" class="nav-link">Post 3</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">Blog Técnico</h1>
+            <p class="hero-subtitle">Arquitectura de Software: Diseño, Patrones y Mejores Prácticas</p>
+            <p class="hero-author">Por: <span>Yun Erasmo Martinez</span></p>
+            <button class="cta-button" onclick="scrollToSection('#post1')">
+                <i class="fas fa-arrow-down"></i> Explorar Posts
+            </button>
+        </div>
+        <div class="hero-background">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+        </div>
+    </section>
+
+    <!-- Posts Container -->
+    <div class="container main-content">
+        <!-- Post 1 -->
+        <article class="post-card" id="post1">
+            <div class="post-header">
+                <h2>POST 1: ¿Qué es la Arquitectura de Software?</h2>
+                <div class="post-meta">
+                    <span class="post-date"><i class="far fa-calendar"></i> 5 de Diciembre, 2025</span>
+                    <span class="post-category"><i class="fas fa-tag"></i> Fundamentos</span>
+                </div>
+            </div>
+            <div class="post-content">
+                <h3>📌 Definición de Arquitectura de Software</h3>
+                <p>La Arquitectura de Software es el conjunto de decisiones de diseño de alto nivel que definen la estructura general de un sistema de software. Es como el "plano de construcción" de una aplicación, estableciendo cómo sus componentes se relacionan entre sí y con el entorno externo.</p>
+                
+                <p><strong>La arquitectura define:</strong></p>
+                <ul>
+                    <li>La estructura del sistema (componentes principales)</li>
+                    <li>Las relaciones entre componentes</li>
+                    <li>Los principios de diseño y evolución del sistema</li>
+                    <li>Las restricciones técnicas y de negocio</li>
+                </ul>
+
+                <h3>🎯 Objetivo Principal de la Arquitectura en un Sistema</h3>
+                <p>El objetivo principal es proporcionar una base sólida y flexible que permita:</p>
+                <ul>
+                    <li><strong>Claridad:</strong> Que todos los desarrolladores comprendan la estructura del proyecto</li>
+                    <li><strong>Guía de desarrollo:</strong> Establecer patrones de cómo se debe codificar</li>
+                    <li><strong>Toma de decisiones:</strong> Facilitar decisiones técnicas consistentes</li>
+                    <li><strong>Gestión de complejidad:</strong> Dividir problemas grandes en componentes manejables</li>
+                </ul>
+
+                <h3>🏗️ Componentes Básicos de una Arquitectura</h3>
+                
+                <h4>1. Módulos</h4>
+                <p>Los módulos son unidades funcionales independientes y reutilizables que encapsulan lógica específica. Cada módulo tiene una responsabilidad bien definida y se comunica con otros módulos a través de interfaces claras.</p>
+                <p><strong>Ejemplo:</strong> En una aplicación de e-commerce, podría haber módulos para: Catálogo de Productos, Carrito de Compras, Procesamiento de Pagos, etc.</p>
+
+                <h4>2. Interfaces</h4>
+                <p>Las interfaces definen el contrato entre componentes, especificando qué servicios ofrece un módulo y cómo acceder a ellos. Permiten que los componentes se comuniquen de manera desacoplada.</p>
+                <p><strong>Ventaja:</strong> Si cambia la implementación interna de un módulo, otros módulos no se ven afectados siempre que la interfaz permanezca igual.</p>
+
+                <h4>3. Conectores</h4>
+                <p>Son los mecanismos de comunicación entre componentes. Pueden ser:</p>
+                <ul>
+                    <li>Llamadas a funciones directas</li>
+                    <li>Servicios web (APIs REST)</li>
+                    <li>Colas de mensajes</li>
+                    <li>Bases de datos compartidas</li>
+                    <li>Event buses o publicadores-suscriptores</li>
+                </ul>
+
+                <h3>⭐ Importancia dentro del Desarrollo de Software</h3>
+                
+                <h4>Escalabilidad</h4>
+                <p>Una buena arquitectura permite que el sistema crezca sin perder rendimiento. Facilita agregar nuevas funcionalidades sin reescribir código existente.</p>
+                <ul>
+                    <li>Soportar más usuarios concurrentes</li>
+                    <li>Procesar mayores volúmenes de datos</li>
+                    <li>Agregar nuevas características de forma modular</li>
+                </ul>
+
+                <h4>Mantenibilidad</h4>
+                <p>El código bien arquitecturado es más fácil de entender, modificar y debuggear. Reduce el tiempo y costo de mantenimiento a largo plazo.</p>
+                <ul>
+                    <li>Código más legible y organizado</li>
+                    <li>Cambios localizados a componentes específicos</li>
+                    <li>Menos riesgo de efectos secundarios inesperados</li>
+                </ul>
+
+                <h4>Rendimiento</h4>
+                <p>La arquitectura influye directamente en cómo se gestiona la memoria, el procesamiento y las comunicaciones del sistema.</p>
+                <ul>
+                    <li>Optimización de recursos</li>
+                    <li>Reducción de latencia</li>
+                    <li>Mejor gestión de concurrencia</li>
+                </ul>
+
+                <h3>👨‍💼 Roles y Responsabilidades del Arquitecto de Software</h3>
+                <p>El Arquitecto de Software es responsable de:</p>
+                <ul>
+                    <li><strong>Análisis:</strong> Entender los requisitos del negocio y técnicos</li>
+                    <li><strong>Diseño:</strong> Crear la estructura general del sistema</li>
+                    <li><strong>Guía:</strong> Asesorar al equipo de desarrollo</li>
+                    <li><strong>Evaluación:</strong> Revisar que se siga la arquitectura propuesta</li>
+                    <li><strong>Evolución:</strong> Adaptar la arquitectura conforme cambian los requisitos</li>
+                    <li><strong>Comunicación:</strong> Documentar y explicar decisiones arquitectónicas</li>
+                </ul>
+
+                <h3>💼 Ejemplos Básicos de Arquitecturas en Proyectos Reales</h3>
+                <p><strong>1. Arquitectura Monolítica - E-commerce (Shopify)</strong></p>
+                <ul>
+                    <li>Todos los módulos en una sola aplicación</li>
+                    <li>Base de datos centralizada</li>
+                    <li>Fácil de comenzar pero difícil de escalar</li>
+                </ul>
+
+                <p><strong>2. Arquitectura de Microservicios - Netflix</strong></p>
+                <ul>
+                    <li>Servicios independientes (Usuarios, Catálogo, Streaming, Recomendaciones)</li>
+                    <li>Cada servicio tiene su propia base de datos</li>
+                    <li>Permite escalar servicios individualmente</li>
+                </ul>
+
+                <p><strong>3. Arquitectura MVC - Aplicaciones Web Tradicionales</strong></p>
+                <ul>
+                    <li>Model: Lógica de negocio</li>
+                    <li>View: Presentación</li>
+                    <li>Controller: Gestión de flujo</li>
+                </ul>
+
+                <div class="post-conclusion">
+                    <h3>✅ Conclusión</h3>
+                    <p>La Arquitectura de Software es el corazón de cualquier proyecto exitoso. No es solo sobre escribir código, sino sobre tomar decisiones estratégicas que impacten en la escalabilidad, mantenibilidad y rendimiento del sistema. Un buen arquitecto es capaz de prever los desafíos futuros y diseñar sistemas lo suficientemente flexibles para adaptarse.</p>
+                    <p><em>Recuerda: "Una buena arquitectura es invisible pero sus efectos se sienten en todo el proyecto."</em></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post-card" id="post2">
+            <div class="post-header">
+                <h2>POST 2: Estilos Arquitectónicos Más Utilizados</h2>
+                <div class="post-meta">
+                    <span class="post-date"><i class="far fa-calendar"></i> 5 de Diciembre, 2025</span>
+                    <span class="post-category"><i class="fas fa-tag"></i> Estilos Arquitectónicos</span>
+                </div>
+            </div>
+            <div class="post-content">
+                <h3>📌 Definición de Estilo Arquitectónico</h3>
+                <p>Un estilo arquitectónico es un patrón recurrente que define la forma en que los componentes de un sistema están organizados y cómo se comunican entre sí. Es como elegir entre construcción vertical (rascacielos) u horizontal (casas) cuando construimos ciudades.</p>
+
+                <h3>1️⃣ Arquitectura Monolítica</h3>
+                <h4>Características:</h4>
+                <ul>
+                    <li>Toda la aplicación es un único programa ejecutable</li>
+                    <li>Una base de datos centralizada</li>
+                    <li>Componentes fuertemente acoplados</li>
+                    <li>Despliegue como una unidad única</li>
+                </ul>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Desarrollo inicial rápido</li>
+                    <li>✅ Fácil de probar end-to-end</li>
+                    <li>✅ Rendimiento consistente</li>
+                    <li>✅ Herramientas de debugging simples</li>
+                </ul>
+
+                <h4>Desventajas:</h4>
+                <ul>
+                    <li>❌ Difícil de escalar independientemente</li>
+                    <li>❌ Cambios en un módulo afectan todo el sistema</li>
+                    <li>❌ Tecnologías están limitadas a las de la aplicación principal</li>
+                    <li>❌ Difícil para equipos grandes</li>
+                </ul>
+
+                <h3>2️⃣ Arquitectura en Capas (N-Capas)</h3>
+                <p>Organiza el sistema en capas horizontales, cada una con responsabilidades específicas.</p>
+                
+                <p><strong>Capas típicas:</strong></p>
+                <ul>
+                    <li><strong>Presentación:</strong> Interfaz de usuario</li>
+                    <li><strong>Lógica de Negocio:</strong> Reglas y procesos</li>
+                    <li><strong>Persistencia:</strong> Acceso a datos</li>
+                    <li><strong>Base de Datos:</strong> Almacenamiento</li>
+                </ul>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Separación clara de responsabilidades</li>
+                    <li>✅ Fácil de entender y mantener</li>
+                    <li>✅ Permite trabajo paralelo entre equipos</li>
+                    <li>✅ Reutilización de capas</li>
+                </ul>
+
+                <h4>Desventajas:</h4>
+                <ul>
+                    <li>❌ Llamadas en cascada pueden afectar rendimiento</li>
+                    <li>❌ Puede llevar a código "gordo" en capas intermedias</li>
+                    <li>❌ Difícil distribuir horizontalmente</li>
+                </ul>
+
+                <h3>3️⃣ Arquitectura Cliente-Servidor</h3>
+                <p>Divide el sistema en dos partes: cliente (solicita servicios) y servidor (proporciona servicios).</p>
+                
+                <h4>Características:</h4>
+                <ul>
+                    <li>Cliente es responsable de la presentación y lógica del usuario</li>
+                    <li>Servidor gestiona datos y lógica de negocio</li>
+                    <li>Comunicación a través de red (HTTP, TCP/IP, etc.)</li>
+                    <li>El servidor puede servir múltiples clientes simultáneamente</li>
+                </ul>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Escalabilidad del lado del servidor</li>
+                    <li>✅ Facilita actualizaciones del servidor</li>
+                    <li>✅ Separación clara entre presentación y lógica</li>
+                </ul>
+
+                <h3>4️⃣ Arquitectura MVC (Model-View-Controller)</h3>
+                <p>Separa una aplicación en tres componentes interconectados:</p>
+                
+                <ul>
+                    <li><strong>Model:</strong> Representa los datos y la lógica de negocio</li>
+                    <li><strong>View:</strong> Presenta los datos al usuario</li>
+                    <li><strong>Controller:</strong> Maneja las interacciones del usuario</li>
+                </ul>
+
+                <h4>Flujo:</h4>
+                <p>Usuario → Controller → Model → View → Usuario</p>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Separación de responsabilidades</li>
+                    <li>✅ Fácil de testear cada componente</li>
+                    <li>✅ Reutilización de modelos en diferentes vistas</li>
+                </ul>
+
+                <h3>5️⃣ Arquitectura de Microservicios</h3>
+                <p>Divide una aplicación en servicios pequeños, independientes e interoperables.</p>
+                
+                <h4>Características:</h4>
+                <ul>
+                    <li>Cada servicio es una aplicación pequeña independiente</li>
+                    <li>Cada servicio puede usar su propia base de datos</li>
+                    <li>Comunicación a través de APIs o mensajes</li>
+                    <li>Despliegue independiente de cada servicio</li>
+                </ul>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Altamente escalable</li>
+                    <li>✅ Equipos pueden trabajar independientemente</li>
+                    <li>✅ Tecnologías heterogéneas (cada servicio puede usar diferente tech stack)</li>
+                    <li>✅ Fallos aislados (un servicio caído no derriba toda la app)</li>
+                </ul>
+
+                <h4>Desventajas:</h4>
+                <ul>
+                    <li>❌ Complejidad operacional aumenta significativamente</li>
+                    <li>❌ Latencia de red entre servicios</li>
+                    <li>❌ Transacciones distribuidas difíciles de manejar</li>
+                    <li>❌ Debugging más complejo</li>
+                </ul>
+
+                <h3>📊 Comparación entre Estilos Arquitectónicos</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Monolítica</th>
+                            <th>N-Capas</th>
+                            <th>Cliente-Servidor</th>
+                            <th>MVC</th>
+                            <th>Microservicios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Escalabilidad</strong></td>
+                            <td>Baja</td>
+                            <td>Media</td>
+                            <td>Alta</td>
+                            <td>Media</td>
+                            <td>Muy Alta</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Complejidad</strong></td>
+                            <td>Baja</td>
+                            <td>Media</td>
+                            <td>Media</td>
+                            <td>Media</td>
+                            <td>Muy Alta</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mantenibilidad</strong></td>
+                            <td>Baja</td>
+                            <td>Alta</td>
+                            <td>Media</td>
+                            <td>Alta</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testing</strong></td>
+                            <td>Difícil</td>
+                            <td>Fácil</td>
+                            <td>Medio</td>
+                            <td>Fácil</td>
+                            <td>Complejo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tiempo Desarrollo</strong></td>
+                            <td>Rápido</td>
+                            <td>Medio</td>
+                            <td>Medio</td>
+                            <td>Medio</td>
+                            <td>Lento</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="post-conclusion">
+                    <h3>✅ Conclusión</h3>
+                    <p><strong>¿Cuándo conviene cada estilo?</strong></p>
+                    <ul>
+                        <li><strong>Monolítica:</strong> Proyectos pequeños, startups en fase temprana, equipos pequeños</li>
+                        <li><strong>N-Capas:</strong> Aplicaciones empresariales medianas, cuando se necesita mantenibilidad</li>
+                        <li><strong>Cliente-Servidor:</strong> Aplicaciones web tradicionales, sistemas con múltiples usuarios</li>
+                        <li><strong>MVC:</strong> Aplicaciones web y móviles, cuando se necesita separación clara</li>
+                        <li><strong>Microservicios:</strong> Grandes empresas, aplicaciones altamente escalables, equipos distribuidos</li>
+                    </ul>
+                    <p><em>La clave es elegir el estilo que mejor se adapte a tus requisitos de negocio, equipo y recursos.</em></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="post-card" id="post3">
+            <div class="post-header">
+                <h2>POST 3: Patrones Arquitectónicos Modernos</h2>
+                <div class="post-meta">
+                    <span class="post-date"><i class="far fa-calendar"></i> 5 de Diciembre, 2025</span>
+                    <span class="post-category"><i class="fas fa-tag"></i> Patrones Modernos</span>
+                </div>
+            </div>
+            <div class="post-content">
+                <h3>📌 Definición de Patrón Arquitectónico</h3>
+                <p>Un patrón arquitectónico es una solución reutilizable para un problema de diseño común en la arquitectura de software. Son "recetas" probadas que guían la implementación de arquitecturas efectivas, como un conjunto de mejores prácticas cristalizadas.</p>
+
+                <h3>1️⃣ Patrón Clean Architecture</h3>
+                <p>Propuesto por Robert C. Martin, busca crear arquitecturas independientes, testables y flexibles.</p>
+
+                <h4>Capas de Clean Architecture:</h4>
+                <div class="architecture-layers">
+                    <div class="layer">
+                        <strong>Capa Externa (Framework & Drivers)</strong>
+                        <p>Frameworks, herramientas, bases de datos, interfaces web</p>
+                    </div>
+                    <div class="layer">
+                        <strong>Capa Interface Adapters</strong>
+                        <p>Controllers, Gateways, Presenters</p>
+                    </div>
+                    <div class="layer">
+                        <strong>Capa Use Cases</strong>
+                        <p>Lógica de aplicación específica del dominio</p>
+                    </div>
+                    <div class="layer">
+                        <strong>Capa Entities (Dominio)</strong>
+                        <p>Lógica de negocio pura e independiente</p>
+                    </div>
+                </div>
+
+                <h4>Propósito:</h4>
+                <ul>
+                    <li>✅ <strong>Independencia de Frameworks:</strong> No estás atrapado por herramientas</li>
+                    <li>✅ <strong>Testeable:</strong> Lógica de negocio sin dependencias externas</li>
+                    <li>✅ <strong>Independencia de UI:</strong> Cambiar interface sin afectar lógica</li>
+                    <li>✅ <strong>Independencia de Base de Datos:</strong> Cambiar de BD fácilmente</li>
+                    <li>✅ <strong>Independencia de Agentes Externos:</strong> Fácil cambiar APIs</li>
+                </ul>
+
+                <h4>Ejemplo:</h4>
+                <p><strong>Sistema de Usuarios:</strong></p>
+                <ul>
+                    <li><strong>Entities:</strong> Usuario (con atributos y lógica pura)</li>
+                    <li><strong>Use Cases:</strong> CrearUsuario, ActualizarUsuario, EliminarUsuario</li>
+                    <li><strong>Interface Adapters:</strong> UsuarioController, UsuarioRepository</li>
+                    <li><strong>Frameworks:</strong> Express.js, MongoDB, etc.</li>
+                </ul>
+
+                <h3>2️⃣ Arquitectura Hexagonal (Puertos y Adaptadores)</h3>
+                <p>También conocida como "Ports & Adapters", fue propuesta por Alistair Cockburn. Crea un núcleo de negocio aislado con puertos bien definidos.</p>
+
+                <h4>Componentes:</h4>
+                <ul>
+                    <li><strong>Puerto:</strong> Interfaz que define cómo el exterior se comunica con el dominio</li>
+                    <li><strong>Adaptador:</strong> Implementación específica del puerto (BD, API, UI, etc.)</li>
+                    <li><strong>Núcleo (Dominio):</strong> Lógica de negocio pura</li>
+                </ul>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Muy flexible ante cambios externos</li>
+                    <li>✅ Testeable sin dependencias</li>
+                    <li>✅ Fácil agregar nuevos adaptadores</li>
+                    <li>✅ Claridad conceptual muy alta</li>
+                </ul>
+
+                <h4>Desventajas:</h4>
+                <ul>
+                    <li>❌ Requiere disciplina del equipo</li>
+                    <li>❌ Puede parecer sobre-arquitecturada para proyectos simples</li>
+                    <li>❌ Curva de aprendizaje pronunciada</li>
+                </ul>
+
+                <h3>3️⃣ Patrón CQRS (Command Query Responsibility Segregation)</h3>
+                <p>Separa la lógica de lectura (queries) de la lógica de escritura (commands) en modelos diferentes.</p>
+
+                <h4>Concepto:</h4>
+                <ul>
+                    <li><strong>Command:</strong> Operación que cambia el estado (CREATE, UPDATE, DELETE)</li>
+                    <li><strong>Query:</strong> Operación que obtiene información (SELECT/READ)</li>
+                    <li>Cada uno puede tener su propia base de datos optimizada</li>
+                </ul>
+
+                <h4>Flujo CQRS:</h4>
+                <p><strong>Escritura (Command):</strong><br>
+                Usuario → CommandHandler → Dominio → Base Datos de Escritura → Event Store</p>
+                
+                <p><strong>Lectura (Query):</strong><br>
+                Usuario → QueryHandler → Base Datos de Lectura Optimizada → Resultado</p>
+
+                <h4>Ventajas:</h4>
+                <ul>
+                    <li>✅ Optimización independiente de lectura y escritura</li>
+                    <li>✅ Escalabilidad diferenciada (muchas más lecturas típicamente)</li>
+                    <li>✅ Modelos de datos específicos para cada caso de uso</li>
+                    <li>✅ Mejor rendimiento en sistemas complejos</li>
+                </ul>
+
+                <h4>Desventajas:</h4>
+                <ul>
+                    <li>❌ Aumenta complejidad significativamente</li>
+                    <li>❌ Consistencia eventual en lugar de inmediata</li>
+                    <li>❌ Requiere sincronización entre modelos</li>
+                    <li>❌ Difícil de implementar correctamente</li>
+                </ul>
+
+                <h4>Casos de Uso:</h4>
+                <ul>
+                    <li>Plataformas de redes sociales (muchas lecturas, pocas escrituras)</li>
+                    <li>Sistemas de reportes complejos</li>
+                    <li>Aplicaciones de análisis en tiempo real</li>
+                </ul>
+
+                <h3>🔄 Ventajas y Desventajas de Cada Patrón</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Patrón</th>
+                            <th>Ventajas</th>
+                            <th>Desventajas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Clean Architecture</strong></td>
+                            <td>
+                                • Muy testeable<br>
+                                • Independencia de frameworks<br>
+                                • Código centrado en negocio<br>
+                                • Fácil de entender la lógica
+                            </td>
+                            <td>
+                                • Puede ser excesivo para apps simples<br>
+                                • Requiere disciplina<br>
+                                • Más capas = más código boilerplate
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hexagonal</strong></td>
+                            <td>
+                                • Muy flexible ante cambios<br>
+                                • Testeable sin dependencias<br>
+                                • Adaptadores intercambiables<br>
+                                • Excelente para cambios futuros
+                            </td>
+                            <td>
+                                • Compleja de implementar<br>
+                                • Requiere experiencia<br>
+                                • Puede ser sobre-arquitecturada<br>
+                                • Documentación necesaria
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>CQRS</strong></td>
+                            <td>
+                                • Escalabilidad independiente<br>
+                                • Optimización específica<br>
+                                • Rendimiento mejorado<br>
+                                • Modelos especializados
+                            </td>
+                            <td>
+                                • Aumenta complejidad mucho<br>
+                                • Consistencia eventual<br>
+                                • Más difícil de debuggear<br>
+                                • Curva de aprendizaje alta
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>💼 Ejemplos de Aplicación en Proyectos Modernos</h3>
+                
+                <p><strong>Clean Architecture en Aplicación de Tareas:</strong></p>
+                <ul>
+                    <li>Entities: Task, User</li>
+                    <li>Use Cases: CrearTarea, CompletarTarea, ListarTareas</li>
+                    <li>Adapters: TaskRepositorySQL, TaskRepositoryMongoDB</li>
+                    <li>Frameworks: Express + MySQL o Express + MongoDB</li>
+                </ul>
+
+                <p><strong>Hexagonal en Sistema de Pagos:</strong></p>
+                <ul>
+                    <li>Núcleo: Lógica de procesamiento de pagos</li>
+                    <li>Puerto de Pago: Interface para procesar pagos</li>
+                    <li>Adaptadores: StripeAdapter, PayPalAdapter, MercadoPagoAdapter</li>
+                    <li>Cambiar de proveedor es solo cambiar adaptador</li>
+                </ul>
+
+                <p><strong>CQRS en Plataforma de Streaming (como Netflix):</strong></p>
+                <ul>
+                    <li>Commands: AgregarPelícula, CrearUsuario, Suscribirse</li>
+                    <li>Queries: BuscarPelículas, ObtenerRecomendaciones, ListarMisListas</li>
+                    <li>BD Escritura: PostgreSQL optimizado para escrituras</li>
+                    <li>BD Lectura: ElasticSearch o Redis optimizado para búsquedas rápidas</li>
+                </ul>
+
+                <div class="post-conclusion">
+                    <h3>✅ Conclusión Comparativa</h3>
+                    <p><strong>¿Cuál elegir?</strong></p>
+                    <ul>
+                        <li><strong>Clean Architecture:</strong> Excelente para aplicaciones medianas a grandes donde la mantenibilidad es crítica y queremos código testeable</li>
+                        <li><strong>Hexagonal:</strong> Ideal cuando esperamos cambios frecuentes en las dependencias externas o queremos máxima flexibilidad</li>
+                        <li><strong>CQRS:</strong> Usa cuando tienes patrones claros de lectura/escritura muy diferentes o necesitas escalabilidad especializada</li>
+                    </ul>
+                    <p><strong>Dato importante:</strong> Estos patrones no son mutuamente excluyentes. Muchos proyectos modernos combinan Clean Architecture con Hexagonal como base, y agregan CQRS en partes específicas donde sea necesario.</p>
+                    <p><em>La clave es elegir la complejidad apropiada para el problema que estás resolviendo. No hagas architectura prematura, pero anticipa cambios futuros.</em></p>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre el Autor</h2>
+                    <h3>Yun Erasmo Martinez</h3>
+                    <p>Profesional en Desarrollo de Software apasionado por la Arquitectura de Software y las mejores prácticas de ingeniería. Especializado en diseño de sistemas escalables y mantenibles.</p>
+                    <p>Este blog es resultado de investigación profunda sobre Arquitectura de Software, combinando teoría y práctica. El objetivo es compartir conocimiento y ayudar a otros desarrolladores a entender la importancia de una buena arquitectura en sus proyectos.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="social-btn"><i class="fas fa-envelope"></i> Contacto</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Blog Técnico - Arquitectura de Software | Yun Erasmo Martinez</p>
+            <p>Proyecto de Investigación Académica | <a href="#">Ver en GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
